@@ -66,13 +66,13 @@
   </div>
 
   <div
-    class="p-2 w-full sm: mx-10 mb-9"
-    *ngIf="passwordArray && passwordArray.length != 0; else noPasswords"
+    class="p-2 w-full"
+    *ngIf="passwordArray && passwordArray.length != 0; else  noPasswords"
   >
-    <h1 class="font-bold text-1xl">Your Passwords</h1>
+    <h1 class="font-bold text-1xl md:mx-8">Your Passwords</h1>
 
-    <table class="table-auto text-xs mt-3 w-full rounded-md overflow-hidden">
-      <thead class="bg-green-400 overflow-hidden">
+    <table class="table-auto text-xs mt-3 w-full md:mx-8 rounded-md overflow-hidden">
+      <thead class="bg-green-400 w-full overflow-hidden">
         <tr class="">
           <th class="font-medium py-1">Website</th>
           <th class="font-medium py-1">Username</th>
@@ -81,7 +81,7 @@
         </tr>
       </thead>
       <tbody class="bg-green-200">
-        <tr *ngFor="let item of passwordArray ; let i = index">
+        <tr *ngFor="let item of passwordArray ; let i = index"  >
           <td class="text-center min-w-32 py-1">
             <div class="flex justify-center items-center gap-1">
               <span>{{ item.URL }} </span>
@@ -146,7 +146,7 @@
   </div>
   <ng-template #noPasswords>
     <div class="p-2 w-full">
-      <h1 class="font-bold text-1xl">No Passwords</h1>
+      <h1 class="font-bold text-1xl px-2">No Passwords</h1>
     </div>
   </ng-template>
 </div>
