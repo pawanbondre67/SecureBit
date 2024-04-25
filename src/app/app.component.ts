@@ -11,6 +11,7 @@ export class AppComponent  {
   
   imagePath = '../assets/icons8-invisible-48.png';
   
+  
   passwordArray:any[] = [];
 
   list : any = {

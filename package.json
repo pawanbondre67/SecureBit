@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start-pwa" : "ng build --configuration production && http-server -p 8080 -c-1 dist/secure-bit",
+    "start-pwa": "ng build --configuration production && http-server -p 8080 -c-1 dist/secure-bit",
     "serve:ssr:SecureBit": "node dist/secure-bit/server/server.mjs"
   },
   "private": true,
@@ -17,6 +17,7 @@
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
     "@angular/forms": "^17.3.0",
+    "@angular/material": "^17.3.4",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/platform-server": "^17.3.0",
