@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent  {
-  
-  imagePath = '../assets/icons8-invisible-48.png';
+   
+  public installPrompt: Event | null = null;
+
+  askUserToInstall():void{
+    if (this.installPrompt) {
+      (this.installPrompt as any).prompt();
+    }
+  }
   
   
   passwordArray:any[] = [];
@@ -43,18 +49,19 @@ copyText(text: string) {
   }
     
 
-  showpassword() : void{
+  imagePath: string = '../assets/icons8-eye-24.png';
+
+  showpassword(): void {
     let x = document.getElementById("password") as HTMLInputElement;
-   
-    if(x !== null && x.type === "password"){
+
+    if (x !== null && x.type === "password") {
       x.type = "text";
-     this.imagePath = '../assets/icons8-eye-24.png';
-      
-    }else{
+      this.imagePath = '../assets/icons8-eye-24.png';
+
+    } else {
       x.type = "password";
       this.imagePath = '../assets/icons8-invisible-48.png';
     }
-
   }
 
    savepassword(data:any){
